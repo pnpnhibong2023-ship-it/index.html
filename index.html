@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Acc Free HACKERKKL666</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-gray-800 border-b border-gray-700 py-4 px-6 text-center shadow-lg">
+        <h1 class="text-2xl md:text-3xl font-extrabold text-red-500 uppercase tracking-wider">Kho Acc Roblox Free HACKERKKL666</h1>
+        <p class="text-sm text-gray-400 mt-1">Hệ thống phát tài khoản Blox Fruits tự động - Realtime Cloud!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-xl font-bold mb-4 border-l-4 border-red-500 pl-3">DANH SÁCH TÀI KHOẢN TRÊN ĐÁM MÂY</h2>
+            
+            <div id="account-list" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-gray-800 p-4 rounded-lg border border-gray-700 text-center text-gray-400 col-span-full">
+                    Đang kết nối đến máy chủ đám mây...
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Panel Section -->
+        <div class="max-w-4xl mx-auto mt-12 bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <button onclick="toggleAdmin()" class="w-full text-left font-bold text-lg text-yellow-400 flex justify-between items-center focus:outline-none">
+                <span>⚙️ Bảng Quản Trị Chủ Shop (Cloud Admin)</span>
+                <span>▼</span>
+            </button>
+
+            <div id="admin-panel" class="hidden mt-4 pt-4 border-t border-gray-700 space-y-4">
+                <h3 class="font-semibold text-md text-gray-200">🛠️ Thêm Acc Lên Đám Mây</h3>
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">Tên hiển thị / Gói</label>
+                    <input type="text" id="acc-title" placeholder="Ví dụ: Blox Fruits Max Level" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-white text-sm">
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">Tài khoản (Email/Username)</label>
+                    <input type="text" id="acc-user" placeholder="roblox_user@gmail.com" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-white text-sm">
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">Mật khẩu</label>
+                    <input type="text" id="acc-pass" placeholder="Mật khẩu tài khoản" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-white text-sm">
+                </div>
+                <button onclick="addAccount()" class="w-full bg-red-600 hover:bg-red-700 font-bold py-2 rounded text-sm transition">
+                    Đẩy Acc Lên Cloud Ngay
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-center py-4 text-xs text-gray-500 border-t border-gray-700">
+        © 2026 Shop Acc Free HACKERKKL666. Chạy trên Database thật!
+    </footer>
+
+    <!-- Script quản lý ẩn hiện Admin và thêm dữ liệu mẫu -->
+    <script>
+        function toggleAdmin() {
+            let pass = prompt("Nhập mật khẩu quản trị:");
+            if (pass === "123456") {
+                let panel = document.getElementById("admin-panel");
+                panel.classList.toggle("hidden");
+            } else if (pass !== null) {
+                alert("Sai mật khẩu!");
+            }
+        }
+
+        function addAccount() {
+            let title = document.getElementById("acc-title").value;
+            let user = document.getElementById("acc-user").value;
+            let pass = document.getElementById("acc-pass").value;
+
+            if(!title || !user || !pass) {
+                alert("Vui lòng điền đầy đủ thông tin!");
+                return;
+            }
+
+            alert("Đã nhận thông tin! (Kết nối Firebase sẽ lưu trực tiếp vào đây).");
+            
+            // Xóa form sau khi nhập
+            document.getElementById("acc-title").value = "";
+            document.getElementById("acc-user").value = "";
+            document.getElementById("acc-pass").value = "";
+        }
+    </script>
+</body>
+</html>
